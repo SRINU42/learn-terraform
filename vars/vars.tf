@@ -16,4 +16,5 @@ output "sample1" {
 
 output "sample-ext" {
     value = "value of sample- ${var.sample1}"
+    value = "value of sample1 - ${var.sample}"
 }
