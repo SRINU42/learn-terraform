@@ -70,6 +70,6 @@ output "env" {
 variable "url" {}
 
 output "url" {
-    valu = var.url
+    value = var.url
 
 }
