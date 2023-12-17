@@ -4,7 +4,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.sg.id]
 
   tags = {
-    Name = "sample"
+    Name = var.name
   }
 }
 
@@ -16,7 +16,7 @@ data "aws_ami" "example" {
 }
 
 resource "aws_security_group" "sg" {
-  name        = "sample"
+  name        = var.name
   description = "Allow TLS inbound traffic"
 
   ingress {
@@ -36,6 +36,8 @@ resource "aws_security_group" "sg" {
   }
 
   tags = {
-    Name = "sample"
+    Name = var.name
   }
 }
+
+variable "name"
