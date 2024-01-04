@@ -17,3 +17,27 @@ output "class1" {
 output "class2" {
     value = lower( var.class1 )
 }
+
+variable "fruits" {
+    default = [ "apple" , "orange", "mango" ]
+}
+output "fruits-count" {
+    value = length(var.fruits)
+}
+
+variable "classes" {
+    default = {
+        devops ={
+            name = "DevOps"
+            topics = [ "jenkins", "terrafolrm", "docker"]
+        }
+        aws = {
+            name = aws
+            topics = ["s3", "rout53","ami", "ec2" ]
+        }
+    }
+}
+
+output "devops_topics" {
+    value =var.classes["devops"]["topics"]
+}
