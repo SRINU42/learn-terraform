@@ -7,9 +7,9 @@ output "class" {
 }
 
 output "class1" {
-    value = upper[ var.class ]
+    value = upper( var.class)
 }
 
 output "class2" {
-    value = lower[ var.class ]
+    value = lower( var.class )
 }
