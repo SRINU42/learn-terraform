@@ -32,7 +32,7 @@ variable "classes" {
             topics = [ "jenkins", "terrafolrm", "docker"]
         }
         aws = {
-            name = aws
+            name = "aws"
             topics = ["s3", "rout53","ami", "ec2" ]
         }
     }
