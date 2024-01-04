@@ -33,6 +33,10 @@ output "fruits_2" {
     value = var.fruits[4]
 }
 
+output "fruits_2" {
+    value = element(var.fruits[4])
+}
+
 
 variable "classes" {
     default = {
