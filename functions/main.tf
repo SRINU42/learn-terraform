@@ -30,7 +30,7 @@ output "fruits_1" {
 }
 
 output "fruits_2" {
-    value = var.fruits[4]
+    value = var.fruits[2]
 }
 
 output "fruits_3" {
