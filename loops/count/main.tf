@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  count         = 3
+  count         = length(var.instance)
   ami           = data.aws_ami.example.id
   instance_type = "t3.micro"
 

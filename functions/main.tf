@@ -29,13 +29,14 @@ output "fruits_1" {
     value = var.fruits[0]
 }
 
-output "fruits_2" {
-    value = var.fruits[2]
-}
+# output "fruits_2" {
+#    value = var.fruits[4]
+#}
 
 output "fruits_3" {
     value = element(var.fruits, 4)
 }
+
 
 
 variable "classes" {
