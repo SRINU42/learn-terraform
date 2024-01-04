@@ -33,7 +33,7 @@ variable "classes" {
         }
         aws = {
             name = "aws"
-            topics = ["s3", "rout53","ami", "ec2" ]
+            # topics = ["s3", "rout53","ami", "ec2" ]
         }
     }
 }
