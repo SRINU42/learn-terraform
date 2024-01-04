@@ -43,5 +43,5 @@ output "devops_topics" {
 }
 
 output "aws_topics" {
-    value = var.classes["aws"]["topicd"]
+    value = var.classes["aws"]["topics"]
 }
