@@ -6,10 +6,10 @@ resource "aws_instance" "web" {
   tags = {
     Name = var.name
   }
-}
 
 
-  provisioner "remote-exec" {
+
+provisioner "remote-exec" {
     connection {
     type     = "ssh"
     user     = "centos"
@@ -22,6 +22,7 @@ resource "aws_instance" "web" {
       "ansible-pull -i localhost, -U https://github.com/SRINU42/roboshop-ansible2 main.yml -e env=dev -e role_name=${var.name}",
     ]
   }
+}
 
 resource "aws_route53_record" "www" {
   zone_id = Z037005736Y93DYIMVKEV
