@@ -1,6 +1,6 @@
 
 resource "aws_instance" "web" {
-  for each      = var.instance
+  for_each      = var.instance
   ami           = data.aws_ami.example.id
   instance_type = "t3.micro"
 
