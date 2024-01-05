@@ -1,7 +1,7 @@
 module "instance" {
     for_each =var.instance
     source = "./ec2"
-    name = each.value
+    name = each.key
 }
 
 variable "instance" {
