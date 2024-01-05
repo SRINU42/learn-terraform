@@ -25,7 +25,7 @@ variable "instance" {
 
       frontend ={
         name = "frontend"
-        instance_type = "t3.micro"
+      
       }
       catalogue = {
         catalogue = "catalogue"
