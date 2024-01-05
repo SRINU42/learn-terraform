@@ -1,11 +1,11 @@
 
 resource "aws_instance" "web" {
-  count         = length(var.instance)
+  for each      = var.instance
   ami           = data.aws_ami.example.id
   instance_type = "t3.micro"
 
   tags = {
-    Name = element(var.instance, count.index)
+    Name = var.instance
   }
 }
 
