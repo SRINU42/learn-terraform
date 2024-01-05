@@ -5,7 +5,7 @@ resource "aws_instance" "web" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "hello "
+    Name = var.instance
   }
 }
 
@@ -18,15 +18,17 @@ data "aws_ami" "example" {
 
 variable "instance" {
     default = {
-      frontend = "frontend"
-      instance_type = "t3.micro"
-    }
-    catalogue = {
-      catalogue = "catalogue"
-      instance_type = "t3.nano"
-    }
-    cart = {
-      cart = "cart"
-      instance_type = "t3.nano"
+      frontend ={
+        name = "frontend"
+        instance_type = "t3.micro"
+      }
+      catalogue = {
+        catalogue = "catalogue"
+        instance_type = "t3.nano"
+      }
+      cart = {
+        cart = "cart"
+        instance_type = "t3.nano"
+      }
     }
 }
