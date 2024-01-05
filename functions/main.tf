@@ -59,3 +59,12 @@ output "devops_topics" {
 output "aws_topics" {
     value = lookup(lookup( var.classes, "aws", null ), "topics", "No Topics")
 }
+
+variable "a" {
+  default = 100
+}
+
+output "a" {
+  value = var.a > 50  ? "Surplus Quantity" : "Less Quantity"
+
+}
